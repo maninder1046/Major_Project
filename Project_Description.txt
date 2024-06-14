@@ -1,0 +1,65 @@
+# Major_Project
+
+This application combines data retrieval, machine learning, and real-time web application features to provide a comprehensive tool for stock analysis and prediction.
+
+Key Components:
+
+Library Imports:
+Data Handling: pandas, numpy
+Model Loading: keras.models.load_model
+Plotting: matplotlib.pyplot
+Stock Data: yfinance and pandas_datareader
+Web Application: streamlit
+Email Alerts: smtplib, email.mime
+
+Configuration:
+Sets up the Streamlit app with a page title and layout.
+Provides a sidebar for user inputs, including the stock symbol, price threshold, and email for alerts.
+
+Data Fetching:
+Uses yfinance to fetch historical stock data from Yahoo Finance.
+Defines the date range for fetching the data.
+
+Model Loading:
+Loads a pre-trained Keras model for stock prediction.
+
+Streamlit Autorefresh:
+Automatically refreshes the app at a specified interval.
+
+Stock Data Display:
+Displays the latest stock data in the app.
+
+Email Alerts:
+Defines a function to send email alerts if the stock price crosses the user-defined threshold.
+
+Data Preparation:
+Prepares the data for model input by scaling it using MinMaxScaler.
+Creates training and testing datasets from the historical stock data.
+
+Model Prediction:
+Uses the loaded Keras model to predict future stock prices.
+Inverse transforms the predictions to get the actual stock prices.
+
+Performance Metrics:
+Calculates and displays performance metrics like RMSE, MAE, MAPE, and accuracy of the model.
+
+Visualizations:
+Moving Averages: Plots moving averages for different windows (e.g., 10, 20, 50 days).
+Closing Price History: Plots the actual closing prices of the stock.
+Model Predictions: Plots the training, validation, and predicted stock prices.
+Prediction Table: Displays a table with actual and predicted prices.
+
+Trend Analysis:
+Analyzes and displays the future trend of the stock price (up or down).
+
+
+Summary of Code Flow:
+Initialization: Imports necessary libraries and sets up the Streamlit app.
+User Input: Collects stock symbol, price threshold, and email details from the user.
+Data Fetching: Retrieves historical stock data using yfinance.
+Model Loading: Loads a pre-trained model for stock prediction.
+Data Processing: Prepares and scales the data for the model, creating training and testing datasets.
+Prediction: Uses the model to predict future stock prices and calculates performance metrics.
+Visualization: Generates and displays various plots for stock data and predictions.
+Alerts: Checks if the stock price crosses the threshold and sends an email alert if it does.
+Trend Analysis: Analyzes and displays the predicted trend of the stock price.
